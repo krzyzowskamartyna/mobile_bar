@@ -1,0 +1,39 @@
+@import '../../global.scss';
+
+
+.grid_item{
+height: 45.3vh;
+color: $white;
+    .icon{
+        font-size: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        margin-top:-1rem
+    }
+    ion-label{
+        position: absolute;
+        padding-top: 4em;
+        font-weight: 300;
+        font-size:1.4rem;
+        }
+}
+
+.pink{
+    background: $pink;
+
+}
+.blue{
+    background:$blue;
+    color: $white
+}
+.white{
+    background: #2BD8CA
+}
+.yellow{
+    color: $white;
+    background: $yellow;
+    .icon{
+        color: $white; 
+    }
+}

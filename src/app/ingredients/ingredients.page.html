@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="secondary" routerLink="/main">
+    <ion-title>
+      <ion-icon name="arrow-back"></ion-icon> Wstecz
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let drink of drinks">
+      {{drink.alkohol}}
+    </ion-item>
+  </ion-list>
+</ion-content>

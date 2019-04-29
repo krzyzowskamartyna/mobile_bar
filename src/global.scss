@@ -9,3 +9,46 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat+Alternates');
+
+$blue: #26547C;
+$white: #FFFCF9;
+$pink: #EF476F;
+$yellow: #FFD166;
+
+ion-title{
+  font-family: 'Julius Sans One', sans-serif;
+}
+ion-row{
+    width: 100vw;
+    padding: 0;
+}
+ion-col{
+    padding: 0;
+}
+ion-toolbar{
+    text-transform: uppercase;
+    font-family: 'Julius Sans One', sans-serif;
+    ion-icon{
+        font-size: 1.3rem
+    }
+}
+
+
+.grid_list {
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    .grid_item{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Julius Sans One', sans-serif;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+}

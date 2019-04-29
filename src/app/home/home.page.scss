@@ -1,1 +1,39 @@
+@import '../../global.scss';
 
+ion-content{
+  --background: $white;
+      text-transform: uppercase;
+font-family: 'Julius Sans One', sans-serif;
+     h3{
+         font-size: 200%;
+         color: $pink;
+         font-weight: 100;
+     }
+    .title{
+        margin-top: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    h1{
+        font-size: 700%;
+    }
+    h2{
+        font-size: 600%
+    }
+}
+.button{
+    height: 4rem;
+    width: 10rem;
+    margin-top: 2rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    p{
+        color: $white;
+          font-family: 'Julius Sans One', sans-serif;
+          font-size: 300%;
+    }
+}
+
+}
