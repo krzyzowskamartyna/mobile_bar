@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let drink of drinks">
-      {{drink.alkohol}}
-    </ion-item>
-  </ion-list>
+  <ion-item color="primary" *ngFor="let drink of drinks" class="item">
+    <ion-text> {{drink.alkohol}} </ion-text>
+    <!-- 
+    <ion-note slot="end">{{drink.alkohol.length}}</ion-note> -->
+  </ion-item>
 </ion-content>

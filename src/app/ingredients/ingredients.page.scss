@@ -1,5 +1,15 @@
 @import '../../global.scss';
 
 ion-item{
-    text-transform: uppercase
+    margin-bottom:5px;
+    
+    font-size: 2.5em
+}
+ion-text{
+    text-transform: uppercase;
+    height: 15vh;
+  
+}
+.item{
+     font-family: 'Julius Sans One', sans-serif;
 }

@@ -23,14 +23,15 @@ export class ApiService {
     private http: HttpClient,
   ) { }
 
-  apiBase: String = 'https://api.mlab.com/api/1/databases/bar/collections/items?apiKey=q6Fe3HyzvkpdVymQxPKSpPtcEjBHGHFc'
+  apiBase: String = 'https://api.mlab.com/api/1/databases/bar/collections/items';
+  key: String = '?apiKey=q6Fe3HyzvkpdVymQxPKSpPtcEjBHGHFc';
 
 
   getDrink(id: any): Observable<Drink> {
-    return this.http.get<Drink>(`${this.apiBase}/${id}`)
+    return this.http.get<Drink>(`${this.apiBase}/${id}${this.key}`)
   }
 
   getDrinkList(): Observable<Drink[]> {
-    return this.http.get<Drink[]>(`${this.apiBase}`)
+    return this.http.get<Drink[]>(`${this.apiBase}${this.key}`)
   }
 }

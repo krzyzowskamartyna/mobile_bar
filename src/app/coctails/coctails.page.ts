@@ -4,7 +4,7 @@ import { Drink, ApiService } from '../services/api.service';
 @Component({
   selector: 'app-coctails',
   templateUrl: './coctails.page.html',
-  styleUrls: ['./coctails.page.scss'],
+  styleUrls: ['../ingredients/ingredients.page.scss'],
   providers: [ApiService]
 })
 export class CoctailsPage implements OnInit {
