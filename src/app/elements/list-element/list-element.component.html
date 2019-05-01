@@ -1,0 +1,9 @@
+<ion-grid class="grid_list">
+  <ion-row>
+    <ion-col color="primary" *ngFor="let item of items" class="item" (click)="goTo(item)">
+      <div class="grid_item">
+        <ion-label>{{item.name}}</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

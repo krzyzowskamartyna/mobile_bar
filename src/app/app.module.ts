@@ -12,12 +12,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IngredientsPageModule } from './ingredients/ingredients.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ComponentsModule } from './elements/components.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule,
     MatGridListModule,
+    ComponentsModule,
     HttpClientModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule, IngredientsPageModule],
   providers: [
     StatusBar,

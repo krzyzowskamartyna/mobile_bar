@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CoctailsDetailsPage } from './coctails-details.page';
-import { ComponentsModule } from 'src/app/elements/components.module';
+import { NonAlcoholPage } from './non-alcohol.page';
+import { ComponentsModule } from '../elements/components.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: CoctailsDetailsPage
+    component: NonAlcoholPage
   }
 ];
 
@@ -21,8 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     ComponentsModule,
-  RouterModule.forChild(routes)
+    RouterModule.forChild(routes)
   ],
-  declarations: [CoctailsDetailsPage]
+  declarations: [NonAlcoholPage]
 })
-export class CoctailsDetailsPageModule { }
+export class NonAlcoholPageModule { }

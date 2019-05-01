@@ -1,0 +1,15 @@
+<ion-card>
+
+  <ion-card-header>
+    <ion-img *ngIf="item.image" data-src="{{item.image}}"></ion-img>
+    <ion-card-title>{{item.name}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-card-subtitle>Składniki</ion-card-subtitle>
+    <ion-item *ngFor="let i of item.ingrediens">{{i}}</ion-item>
+  </ion-card-content>
+  <ion-card-content>
+    <ion-card-subtitle>Przygotowanie</ion-card-subtitle>
+    <ion-item>{{item.preparation}}</ion-item>
+  </ion-card-content>
+</ion-card>

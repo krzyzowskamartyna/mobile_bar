@@ -3,12 +3,14 @@ import { ApiService, Drink } from 'src/app/services/api.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-coctails-details',
-  templateUrl: './coctails-details.page.html',
-  styleUrls: ['./coctails-details.page.scss'],
+  selector: 'app-non-alcohol-details',
+  templateUrl: './non-alcohol-details.page.html',
+  styleUrls: ['./non-alcohol-details.page.scss'],
+
   providers: [ApiService]
 })
-export class CoctailsDetailsPage implements OnInit {
+export class NonAlcoholDetailsPage implements OnInit {
+
   constructor(private api: ApiService, private router: ActivatedRoute) { }
 
   drink: Drink = new Drink();
@@ -17,7 +19,7 @@ export class CoctailsDetailsPage implements OnInit {
   ngOnInit() {
     this.loading = true;
     this.router.params.subscribe(params => {
-      this.api.getDrink(params.id).subscribe(drink => this.drink = drink);
+      this.api.getDrinkWithout(params.id).subscribe(drink => this.drink = drink);
       this.loading = false;
     });
   }

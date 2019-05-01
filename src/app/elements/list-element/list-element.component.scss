@@ -1,0 +1,27 @@
+@import '../../../global.scss';
+
+ion-col{
+    padding: 0;
+}
+.grid_item{
+height: 30vh;
+min-width: 33vw;
+max-width: 33.34vw;
+background:$blue;
+color: $yellow;
+border-right: 0.1px solid $yellow;
+border-bottom: 0.1px solid $yellow;
+    ion-label{
+        font-family: 'Julius Sans One', sans-serif;
+        position: absolute;
+        padding-top: 1em;
+        font-weight: 300;
+        font-size:1.4rem;
+        }
+}
+
+ion-text{
+    text-transform: uppercase;
+    height: 15vh;
+  
+}

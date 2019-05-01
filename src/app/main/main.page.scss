@@ -1,6 +1,8 @@
 @import '../../global.scss';
 
-
+ion-col{
+    padding: 0;
+}
 .grid_item{
 height: 45.3vh;
 color: $white;

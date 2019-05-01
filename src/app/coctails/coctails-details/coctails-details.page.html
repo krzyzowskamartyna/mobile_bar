@@ -5,19 +5,7 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>{{drink.name}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-card-subtitle>Składniki</ion-card-subtitle>
-      <ion-item *ngFor="let i of drink.ingrediens">{{i}}</ion-item>
-    </ion-card-content>
-    <ion-card-content>
-      <ion-card-subtitle>Przygotowanie</ion-card-subtitle>
-      <ion-item>{{drink.preparation}}</ion-item>
-    </ion-card-content>
-  </ion-card>
+  <ion-spinner *ngIf="loading" name="circles"></ion-spinner>
+  <app-list-element-details [item]="drink"></app-list-element-details>
 </ion-content>

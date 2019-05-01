@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { CoctailsPage } from './coctails.page';
+import { ComponentsModule } from '../elements/components.module';
 
 const routes: Routes = [
   {
@@ -19,9 +20,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     RouterModule.forChild(routes)
   ],
   declarations: [CoctailsPage],
-  exports: [CoctailsPage]
+  //exports: [CoctailsPage]
 })
 export class CoctailsPageModule { }

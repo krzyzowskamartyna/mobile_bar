@@ -11,12 +11,19 @@ export class IngredientsPage implements OnInit {
 
   constructor(private api: ApiService) { }
 
-  drinks: Drink[] = []
+  drinks: Drink[] = [];
+  selectedAlkohol: String;
+  Drink: Drink;
 
   loadDrinks() {
     this.api.getDrinkList().subscribe(drinkResponse => {
       this.drinks = drinkResponse
     })
+  }
+
+  sortDrinks(selectedAlkohol: Drink) {
+    /* this.Drink = selectedAlkohol; */
+    this.drinks
   }
   ngOnInit() {
     this.loadDrinks();
