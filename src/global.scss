@@ -24,15 +24,16 @@ ion-row{
     width: 100vw;
     padding: 0;
 }
-ion-col{
-    padding: 0;
-}
+
 ion-toolbar{
     text-transform: uppercase;
     font-family: 'Julius Sans One', sans-serif;
     ion-icon{
         font-size: 1.3rem
     }
+}
+ion-spinner{
+  margin: 50%
 }
 
 .grid_list {

@@ -4,15 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-import { MatGridListModule } from '@angular/material/grid-list';
 
-import { IngredientsPage } from './ingredients.page';
+import { FlavourPage } from './flavour.page';
 import { ComponentsModule } from '../elements/components.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: IngredientsPage
+    component: FlavourPage
   }
 ];
 
@@ -20,12 +19,10 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    MatGridListModule,
     ComponentsModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [IngredientsPage],
-  exports: [IngredientsPage]
+  declarations: [FlavourPage]
 })
-export class IngredientsPageModule { }
+export class FlavourPageModule { }

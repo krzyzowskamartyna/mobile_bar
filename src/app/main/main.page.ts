@@ -1,25 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.page.html',
-  styleUrls: ['./main.page.scss']
+    selector: 'app-main',
+    templateUrl: './main.page.html',
+    styleUrls: ['./main.page.scss'],
 })
 export class MainPage implements OnInit {
 
-  constructor() { }
+    constructor() { }
+    ngOnInit() {
+    }
 
-  ngOnInit() {
-  }
-
-
-
-  /* currentDisplay: String = 'coctails_list';
-
-  changeDisplay(displayName: String) {
-    this.currentDisplay = displayName;
-  }
-  setDisplay() {
-    this.changeDisplay('coctails_list')
-  } */
 }

@@ -21,6 +21,7 @@ export class ListElementComponent implements OnInit {
 
   constructor(private route: Router) { }
   @Input() items: ListAdapter[];
+  @Input() color: string;
 
   goTo(item: ListAdapter) {
     this.route.navigate([item.route])

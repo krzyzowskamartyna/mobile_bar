@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'coctails/:id', loadChildren: './coctails/coctails-details/coctails-details.module#CoctailsDetailsPageModule' },
   { path: 'non-alcohol', loadChildren: './non-alcohol/non-alcohol.module#NonAlcoholPageModule' },
   { path: 'non-alcohol-details/:id', loadChildren: './non-alcohol/non-alcohol-details/non-alcohol-details.module#NonAlcoholDetailsPageModule' },
+  { path: 'flavour', loadChildren: './flavour/flavour.module#FlavourPageModule' },
 ];
 
 @NgModule({

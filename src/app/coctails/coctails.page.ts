@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Drink, ApiService } from '../services/api.service';
 import { ListAdapter } from '../elements/list-element/list-element.component';
 
@@ -11,6 +11,8 @@ import { ListAdapter } from '../elements/list-element/list-element.component';
 export class CoctailsPage implements OnInit {
 
   constructor(private api: ApiService) { }
+
+
 
   drinks: Drink[] = [];
   list: ListAdapter[] = [];

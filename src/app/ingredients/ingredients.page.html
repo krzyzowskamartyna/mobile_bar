@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-item color="primary" *ngFor="let drink of drinks" class="item">
-    <ion-text> {{drink.alkohol}} </ion-text>
-  </ion-item>
+  <ion-spinner *ngIf="loading" name="circles"></ion-spinner>
+  <app-list-element [items]="list" color="blue">
+  </app-list-element>
 </ion-content>

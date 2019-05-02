@@ -12,6 +12,12 @@ export class Drink {
   alkohol: String;
 }
 
+export class Category {
+  _id: String;
+  name: String;
+}
+
+
 export class DrinkListResponse {
   drinks: Drink[];
 }
@@ -35,10 +41,14 @@ export class ApiService {
     return this.http.get<Drink[]>(`${this.apiBase}/items${this.key}`)
   }
 
-  getDrinkListbyAlcohol(alcohol: string): Observable<Drink[]> {
-    return this.http.get<Drink[]>(`${this.apiBase}/items${this.key}&q={"alkohol":${alcohol}}`)
+
+  getCategory(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${this.apiBase}/category/${this.key}`)
   }
 
+  getFlavour(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${this.apiBase}/flavour/${this.key}`)
+  }
   getDrinkWithout(_id: any): Observable<Drink> {
     return this.http.get<Drink>(`${this.apiBase}/itemsWithout/${_id}${this.key}`)
   }
