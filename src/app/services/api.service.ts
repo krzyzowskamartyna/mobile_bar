@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { key } from '../config';
 
 export class Drink {
   _id: any;
@@ -30,30 +31,31 @@ export class ApiService {
   ) { }
 
   apiBase: String = 'https://api.mlab.com/api/1/databases/bar/collections';
-  key: String = '?apiKey=q6Fe3HyzvkpdVymQxPKSpPtcEjBHGHFc';
-
 
   getDrink(_id: any): Observable<Drink> {
-    return this.http.get<Drink>(`${this.apiBase}/items/${_id}${this.key}`)
+    return this.http.get<Drink>(`${this.apiBase}/items/${_id}${key}`)
   }
 
   getDrinkList(): Observable<Drink[]> {
-    return this.http.get<Drink[]>(`${this.apiBase}/items${this.key}`)
+    return this.http.get<Drink[]>(`${this.apiBase}/items${key}`)
   }
 
+  getAlcohols(name: string): Observable<Drink[]> {
+    return this.http.get<Drink[]>(`${this.apiBase}/items/${key}&q={"alkohol":"${name}"}`)
+  }
 
   getCategory(): Observable<Category[]> {
-    return this.http.get<Category[]>(`${this.apiBase}/category/${this.key}`)
+    return this.http.get<Category[]>(`${this.apiBase}/category/${key}`)
   }
 
   getFlavour(): Observable<Category[]> {
-    return this.http.get<Category[]>(`${this.apiBase}/flavour/${this.key}`)
+    return this.http.get<Category[]>(`${this.apiBase}/flavour/${key}`)
   }
   getDrinkWithout(_id: any): Observable<Drink> {
-    return this.http.get<Drink>(`${this.apiBase}/itemsWithout/${_id}${this.key}`)
+    return this.http.get<Drink>(`${this.apiBase}/itemsWithout/${_id}${key}`)
   }
 
   getDrinkWithoutList(): Observable<Drink[]> {
-    return this.http.get<Drink[]>(`${this.apiBase}/itemsWithout${this.key}`)
+    return this.http.get<Drink[]>(`${this.apiBase}/itemsWithout${key}`)
   }
 }

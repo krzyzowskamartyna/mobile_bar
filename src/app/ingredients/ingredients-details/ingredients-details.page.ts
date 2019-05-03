@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, Category } from '../services/api.service';
-import { ListAdapter } from '../elements/list-element/list-element.component';
+import { ApiService, Category } from 'src/app/services/api.service';
+import { ListAdapter } from 'src/app/elements/list-element/list-element.component';
 
 @Component({
-  selector: 'app-ingredients',
-  templateUrl: './ingredients.page.html',
-  styleUrls: ['./ingredients.page.scss'],
-  providers: [ApiService]
+  selector: 'app-ingredients-details',
+  templateUrl: './ingredients-details.page.html',
+  styleUrls: ['./ingredients-details.page.scss'],
 })
-export class IngredientsPage implements OnInit {
+export class IngredientsDetailsPage implements OnInit {
 
   constructor(private api: ApiService) { }
-
   category: Category[] = [];
   list: ListAdapter[] = [];
   loading: boolean = false;
@@ -24,7 +22,7 @@ export class IngredientsPage implements OnInit {
       this.list = this.category.map(c => {
         const item = new ListAdapter();
         item.name = c.name;
-        item.route = "/ingredients-details/"
+        item.route = "/details/"
         return item;
       })
     })
@@ -33,5 +31,4 @@ export class IngredientsPage implements OnInit {
   ngOnInit() {
     this.loadCategory();
   }
-
 }

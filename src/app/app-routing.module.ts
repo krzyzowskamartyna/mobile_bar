@@ -12,6 +12,8 @@ const routes: Routes = [
   { path: 'non-alcohol', loadChildren: './non-alcohol/non-alcohol.module#NonAlcoholPageModule' },
   { path: 'non-alcohol-details/:id', loadChildren: './non-alcohol/non-alcohol-details/non-alcohol-details.module#NonAlcoholDetailsPageModule' },
   { path: 'flavour', loadChildren: './flavour/flavour.module#FlavourPageModule' },
+  { path: 'ingredients-details', loadChildren: './ingredients/ingredients-details/ingredients-details.module#IngredientsDetailsPageModule' },
+  { path: 'details', loadChildren: './ingredients/ingredients-details/details/details.module#DetailsPageModule' },
 ];
 
 @NgModule({
