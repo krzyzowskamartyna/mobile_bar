@@ -18,8 +18,8 @@ export class Drink {
 }
 
 export class Category {
-  _id: String;
-  name: String;
+  _id: string;
+  name: string;
 }
 
 export class DrinkListResponse {

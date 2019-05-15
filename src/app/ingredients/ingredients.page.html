@@ -8,6 +8,13 @@
 
 <ion-content>
   <ion-spinner *ngIf="loading" name="circles"></ion-spinner>
-  <app-list-element [items]="list" color="blue">
-  </app-list-element>
+  <ion-grid class="grid_list">
+    <ion-row>
+      <ion-col *ngFor="let i of list" class="item" routerLink="/ingredients-details/{{i.name}}">
+        <div class="grid_item blue">
+          <ion-label>{{i.name}}</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

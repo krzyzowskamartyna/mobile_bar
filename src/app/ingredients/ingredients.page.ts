@@ -5,7 +5,7 @@ import { ListAdapter } from '../elements/list-element/list-element.component';
 @Component({
   selector: 'app-ingredients',
   templateUrl: './ingredients.page.html',
-  styleUrls: ['./ingredients.page.scss'],
+  styleUrls: ['./ingredients.page.scss', '../elements/list-element/list-element.component.scss'],
   providers: [ApiService]
 })
 export class IngredientsPage implements OnInit {
@@ -21,10 +21,11 @@ export class IngredientsPage implements OnInit {
     this.api.getCategory().subscribe(categoryResponse => {
       this.category = categoryResponse;
       this.loading = false;
+      this.category = categoryResponse;
+      this.loading = false;
       this.list = this.category.map(c => {
         const item = new ListAdapter();
         item.name = c.name;
-        item.route = "/ingredients-details/"
         return item;
       })
     })
@@ -33,5 +34,6 @@ export class IngredientsPage implements OnInit {
   ngOnInit() {
     this.loadCategory();
   }
+
 
 }

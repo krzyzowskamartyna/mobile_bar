@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 export class ListAdapter {
   name: String;
   image: String;
-  // thumb: String;
   preparation: String;
   ingrediens: String;
   alkohol: String;
@@ -24,7 +23,7 @@ export class ListElementComponent implements OnInit {
   @Input() color: string;
 
   goTo(item: ListAdapter) {
-    this.route.navigate([item.route])
+    this.route.navigate([item.route]);
   }
   ngOnInit() { }
 
